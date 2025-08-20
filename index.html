@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frankstell Automotive — Buy US Vehicles at True Cost + Transparent Commission</title>
+  <meta name="description" content="At Frankstell Automotive, we help Nigerian companies and individuals purchase brand-new and pre-owned vehicles from the USA at true cost plus a transparent commission. Photos, videos, and upfront pricing—no surprises." />
+  <meta property="og:title" content="Frankstell Automotive" />
+  <meta property="og:description" content="Buy US vehicles at true cost + transparent commission. Photos, videos, and upfront pricing—no surprises." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://dummyimage.com/1200x630/0b132b/ffffff&text=Frankstell+Automotive" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b132b;      /* deep navy */
+      --bg-2:#1c2541;    /* slate navy */
+      --bg-3:#3a506b;    /* muted teal */
+      --acc:#5bc0be;     /* aqua accent */
+      --acc-2:#ffd166;   /* warm accent */
+      --txt:#eef2f6;     /* light text */
+      --muted:#c7d2fe;   /* muted text */
+      --card:#10172a;    /* card bg */
+      --ok:#22c55e;
+      --warn:#f59e0b;
+      --err:#ef4444;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,Apple Color Emoji,Segoe UI Emoji;color:var(--txt);background:linear-gradient(180deg,var(--bg),var(--bg-2));}
+    a{color:inherit}
+    .container{max-width:1200px;margin:0 auto;padding:0 1.25rem}
+    header{position:sticky;top:0;backdrop-filter:saturate(140%) blur(8px);background:rgba(11,19,43,.6);border-bottom:1px solid rgba(255,255,255,.08);z-index:50}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:.65rem;align-items:center;font-weight:800;letter-spacing:.3px}
+    .brand-logo{width:36px;height:36px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--acc),#6ee7f9);box-shadow:var(--shadow)}
+    .brand span{font-size:1.05rem}
+    .btn{display:inline-flex;align-items:center;gap:.5rem;background:var(--acc);color:#0a0f1f;border:none;border-radius:12px;padding:.8rem 1.05rem;font-weight:700;box-shadow:var(--shadow);text-decoration:none;transition:transform .15s ease, box-shadow .15s ease}
+    .btn:hover{transform:translateY(-2px)}
+    .btn.secondary{background:transparent;color:var(--txt);border:1px solid rgba(255,255,255,.15)}
+    .btn.ghost{background:transparent;border:1px dashed rgba(255,255,255,.2);color:var(--muted)}
+
+    .hero{padding:72px 0 36px;border-bottom:1px solid rgba(255,255,255,.06);background:radial-gradient(1200px 500px at 70% -10%, rgba(91,192,190,.25), transparent 40%),radial-gradient(800px 400px at 10% -20%, rgba(255,209,102,.18), transparent 50%)}
+    .hero h1{font-size:clamp(1.9rem,3.2vw,3.2rem);line-height:1.05;margin:0 0 14px}
+    .hero p{font-size:clamp(1rem,1.4vw,1.15rem);color:#e6edf7cc;margin:0 0 22px;max-width:830px}
+    .badge-row{display:flex;flex-wrap:wrap;gap:.6rem;margin:18px 0 28px}
+    .badge{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:.45rem .7rem;border-radius:999px;font-weight:600;font-size:.9rem;color:#e6edf7}
+
+    .grid{display:grid;gap:20px}
+    .grid.cards{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin:28px 0}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+    .card h3{margin:6px 0 6px;font-size:1.05rem}
+    .muted{color:#bcd6f7cc}
+
+    section{padding:48px 0}
+    h2{font-size:clamp(1.4rem,2.1vw,2rem);margin:0 0 12px}
+    .subtitle{color:#d8e5ffb3;margin:0 0 22px}
+
+    .steps{counter-reset:step}
+    .step{display:flex;gap:14px;align-items:flex-start}
+    .step .num{min-width:30px;height:30px;border-radius:9px;background:var(--acc-2);color:#111;display:grid;place-items:center;font-weight:800}
+    .step h4{margin:0 0 6px}
+
+    table{width:100%;border-collapse:collapse;border:1px solid rgba(255,255,255,.08);border-radius:12px;overflow:hidden}
+    th,td{padding:12px 14px;border-bottom:1px solid rgba(255,255,255,.06)}
+    th{background:rgba(255,255,255,.05);text-align:left}
+    tr:last-child td{border-bottom:none}
+
+    .cta{display:flex;flex-wrap:wrap;gap:10px}
+    .footer{padding:28px 0;border-top:1px solid rgba(255,255,255,.08);color:#c8d3f5a6}
+
+    /* Responsive tweaks */
+    @media (max-width:740px){.nav .cta{display:none}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-logo" aria-hidden="true">
+          <!-- simple wheel glyph -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="9" stroke="#0b132b" stroke-width="2"/>
+            <circle cx="12" cy="12" r="3" fill="#0b132b"/>
+            <path d="M12 3v6M21 12h-6M12 21v-6M3 12h6M5.2 5.2l4.2 4.2M18.8 5.2l-4.2 4.2M18.8 18.8l-4.2-4.2M5.2 18.8l4.2-4.2" stroke="#0b132b" stroke-width="2"/>
+          </svg>
+        </div>
+        <span>Frankstell Automotive</span>
+      </div>
+      <div class="cta">
+        <a class="btn secondary" href="#how">How it works</a>
+        <a class="btn" href="#contact">Request a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Buy US vehicles at <span style="color:var(--acc)">true cost</span> + a transparent commission</h1>
+        <p>
+          At Frankstell Automotive, we help Nigerian companies and individuals purchase brand‑new and pre‑owned vehicles from the USA. Whether sourcing from auctions or dealerships, we show you <strong>actual photos/videos</strong>, agree on <strong>all costs upfront</strong>, and guide you every step—no surprises.
+        </p>
+        <div class="badge-row">
+          <span class="badge">Auctions & US Dealerships</span>
+          <span class="badge">Photos & Videos for Transparency</span>
+          <span class="badge">Upfront, All‑in Costing</span>
+          <span class="badge">Nigeria Delivery Support</span>
+        </div>
+        <div class="cta">
+          <a class="btn" href="#contact">Get a Free Estimate</a>
+          <a class="btn ghost" href="#breakdown">See Sample Cost Breakdown</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="container">
+        <h2>How it works</h2>
+        <p class="subtitle">Frankstell's car pre‑ordering service in five clear stages.</p>
+
+        <div class="grid cards steps">
+          <div class="card step">
+            <div class="num">1</div>
+            <div>
+              <h4>Reach Out</h4>
+              <p class="muted">Tell us the make, model, trim, year, and your budget. If the budget is unrealistic, we suggest a realistic target. If it’s fixed, we recommend cars within it.</p>
+            </div>
+          </div>
+          <div class="card step">
+            <div class="num">2</div>
+            <div>
+              <h4>Selection Stage</h4>
+              <p class="muted">We send links to vehicles that match your brief from Copart and reputable US dealerships. After you choose, we share a clear total‑cost range to get the car to you.</p>
+            </div>
+          </div>
+          <div class="card step">
+            <div class="num">3</div>
+            <div>
+              <h4>Commitment</h4>
+              <p class="muted">Once a price is agreed, you pay a commitment fee of <strong>10% of the total cost or $1,000</strong>—whichever is higher. This counts toward the car payment and confirms readiness to complete purchase after a win.</p>
+            </div>
+          </div>
+          <div class="card step">
+            <div class="num">4</div>
+            <div>
+              <h4>Post Bidding</h4>
+              <p class="muted">If we win the auction, you settle the car in full. Frankstell pays the auction house and prepares the vehicle for shipment.</p>
+            </div>
+          </div>
+          <div class="card step">
+            <div class="num">5</div>
+            <div>
+              <h4>Shipping</h4>
+              <p class="muted">Shipping typically takes <strong>6–8 weeks</strong> to Tin Can Island, Lagos, Nigeria. You can clear the car yourself or use our reliable, fairly‑priced clearing agents. Delivery support available.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why" style="background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,0));">
+      <div class="container">
+        <h2>Why choose Frankstell?</h2>
+        <div class="grid cards">
+          <div class="card">
+            <h3>True Cost Advantage</h3>
+            <p class="muted">We operate at true vehicle cost plus a transparent commission—typically more cost‑effective than traditional dealerships.</p>
+          </div>
+          <div class="card">
+            <h3>Total Transparency</h3>
+            <p class="muted">You approve everything upfront and receive visual proof of condition before any purchase is made.</p>
+          </div>
+          <div class="card">
+            <h3>US Sourcing Expertise</h3>
+            <p class="muted">Access both major auctions and reputable dealerships to match your specs and budget.</p>
+          </div>
+          <div class="card">
+            <h3>End‑to‑End Support</h3>
+            <p class="muted">From bidding to shipping, clearing, and Nigeria delivery support—we coordinate the journey for you.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="breakdown">
+      <div class="container">
+        <h2>Sample cost breakdown</h2>
+        <p class="subtitle">Every client receives a clear, itemized quote before purchase.</p>
+        <div class="card">
+          <table>
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Example</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>US Purchase Price</td>
+                <td>$18,500</td>
+                <td>Final auction hammer price or dealer price</td>
+              </tr>
+              <tr>
+                <td>US Domestic Logistics</td>
+                <td>$450</td>
+                <td>Tow/transport to port, paperwork</td>
+              </tr>
+              <tr>
+                <td>Ocean Shipping</td>
+                <td>$1,250</td>
+                <td>Port & line dependent</td>
+              </tr>
+              <tr>
+                <td>Clearing & Duties</td>
+                <td>₦ (at fx)</td>
+                <td>Transparent local charges at prevailing rates</td>
+              </tr>
+              <tr>
+                <td>Delivery Support (NG)</td>
+                <td>₦ —</td>
+                <td>Optional, route‑dependent</td>
+              </tr>
+              <tr>
+                <td><strong>Frankstell Commission</strong></td>
+                <td><strong>Transparent</strong></td>
+                <td>Agreed upfront—no hidden fees</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" style="background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,0));">
+      <div class="container">
+        <h2>FAQs</h2>
+        <div class="grid cards">
+          <div class="card">
+            <h3>Do you handle only auctions?</h3>
+            <p class="muted">We source from both auctions and US dealerships to get you the best value and condition that fits your brief.</p>
+          </div>
+          <div class="card">
+            <h3>How transparent is the process?</h3>
+            <p class="muted">We share photos/videos of the exact vehicle and provide an itemized quotation for your approval before purchase.</p>
+          </div>
+          <div class="card">
+            <h3>Can you help with delivery in Nigeria?</h3>
+            <p class="muted">Yes. We coordinate clearing and optional delivery support so the experience remains hassle‑free.</p>
+          </div>
+          <div class="card">
+            <h3>How do I get a quote?</h3>
+            <p class="muted">Use the form below or message us on WhatsApp with your preferred make/model, year range, mileage, and target budget.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Request a quote</h2>
+        <p class="subtitle">Tell us the vehicle you want and your target budget. We’ll reply with options and a clear cost breakdown.</p>
+        <div class="grid cards" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));">
+          <div class="card">
+            <form onsubmit="handleSubmit(event)">
+              <div style="display:grid;gap:10px;">
+                <label>Full Name<br>
+                  <input required name="name" class="in" placeholder="Your name" />
+                </label>
+                <label>Email<br>
+                  <input required type="email" name="email" class="in" placeholder="name@example.com" />
+                </label>
+                <label>WhatsApp / Phone<br>
+                  <input name="phone" class="in" placeholder="+234…" />
+                </label>
+                <label>Vehicle brief<br>
+                  <textarea required name="brief" class="in" rows="5" placeholder="e.g., Toyota Camry 2019–2021, under 45k miles, budget $18k"></textarea>
+                </label>
+                <button class="btn" type="submit">Send Request</button>
+                <a class="btn secondary" href="https://wa.me/2348037584189?text=Hello%20Frankstell%2C%20I%27d%20like%20a%20vehicle%20quote." target="_blank" rel="noopener">Chat on WhatsApp</a>
+              </div>
+            </form>
+          </div>
+          <div class="card">
+            <h3>Contact</h3>
+            <p class="muted">Prefer email? Send us your brief and we’ll respond with options.</p>
+            <p><strong>Email:</strong> <a href="mailto:hello@frankstell.autos">hello@frankstell.autos</a></p>
+            <p><strong>Hours:</strong> Mon–Sat, 9:00–18:00 (WAT)</p>
+            <p class="muted" style="font-size:.95rem">Tip: Include make/model, year range, mileage, budget, and any must‑have features.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container" style="display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:space-between">
+      <div>© <span id="y"></span> Frankstell Automotive Ltd. RC 8500024</div>
+      <div style="display:flex;gap:10px;opacity:.85">
+        <a href="#how">Process</a>
+        <span>•</span>
+        <a href="#why">Why Us</a>
+        <span>•</span>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <style>
+    /* simple inputs */
+    .in{width:100%;padding:.8rem 1rem;border-radius:12px;border:1px solid rgba(255,255,255,.16);background:rgba(255,255,255,.04);color:var(--txt);outline:none}
+    .in:focus{border-color:var(--acc);box-shadow:0 0 0 4px rgba(91,192,190,.2)}
+    textarea.in{resize:vertical}
+  </style>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+    function handleSubmit(e){
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      const name = fd.get('name');
+      const email = fd.get('email');
+      const phone = fd.get('phone')||'';
+      const brief = fd.get('brief');
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nVehicle brief:\n${brief}`);
+      window.location.href = `mailto:hello@frankstell.autos?subject=Vehicle%20Quote%20Request%20-%20${encodeURIComponent(name)}&body=${body}`;
+    }
+  </script>
+</body>
+</html>
