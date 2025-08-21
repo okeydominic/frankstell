@@ -40,12 +40,19 @@
     .btn:hover{transform:translateY(-2px)}
     .btn.secondary{background:transparent;color:var(--txt);border:1px solid rgba(255,255,255,.15)}
     .btn.ghost{background:transparent;border:1px dashed rgba(255,255,255,.2);color:var(--muted)}
+  
 
-    .hero{padding:72px 0 36px;border-bottom:1px solid rgba(255,255,255,.06);background:radial-gradient(1200px 500px at 70% -10%, rgba(91,192,190,.25), transparent 40%),radial-gradient(800px 400px at 10% -20%, rgba(255,209,102,.18), transparent 50%)}
+    .hero{background: url('images/aution_image.png') no-repeat center;  display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      position: relative; }/*background:radial-gradient(1200px 500px at 70% -10%, rgba(91,192,190,.25), transparent 100%),padding:72px 0 36px;border-bottom:1px solid rgba(255,255,255,.06);background:radial-gradient(1200px 500px at 70% -10%, rgba(91,192,190,.25), transparent 40%),radial-gradient(800px 400px at 10% -20%, rgba(255,209,102,.18), transparent 50%)}*/
     .hero h1{font-size:clamp(1.9rem,3.2vw,3.2rem);line-height:1.05;margin:0 0 14px}
-    .hero p{font-size:clamp(1rem,1.4vw,1.15rem);color:#e6edf7cc;margin:0 0 22px;max-width:830px}
+    .hero p{font-size:clamp(1rem,1.4vw,1.15rem);color:#fff;margin:0 0 22px;max-width:830px}
     .badge-row{display:flex;flex-wrap:wrap;gap:.6rem;margin:18px 0 28px}
     .badge{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:.45rem .7rem;border-radius:999px;font-weight:600;font-size:.9rem;color:#e6edf7}
+
 
     .grid{display:grid;gap:20px}
     .grid.cards{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin:28px 0}
@@ -89,7 +96,7 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" >
       <div class="container">
         <h1>Buy US vehicles at <span style="color:var(--acc)">true cost</span> + a transparent commission</h1>
         <p>
