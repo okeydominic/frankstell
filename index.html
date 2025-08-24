@@ -7,12 +7,59 @@
   <meta name="description" content="At Frankstell Automotive, we help Nigerian companies and individuals purchase brand-new and pre-owned vehicles from the USA at true cost plus a transparent commission. Photos, videos, and upfront pricing—no surprises." />
   <meta property="og:title" content="Frankstell Automotive" />
   <meta property="og:description" content="Buy US vehicles at true cost + transparent commission. Photos, videos, and upfront pricing—no surprises." />
+  <meta name="keywords" content="buy car from USA Nigeria, car import Nigeria, US auto auctions Nigeria, Copart Nigeria, ship car to Lagos, affordable cars Nigeria" />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://frankstell.autos/" />
   <meta property="og:image" content="https://dummyimage.com/1200x630/0b132b/ffffff&text=Frankstell+Automotive" />
+  <link rel="canonical" href="https://frankstell.autos/" />
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Frankstell Automotive | Buy Cars from the USA to Nigeria" />
+<meta name="twitter:description" content="True cost + transparent commission. US auctions & dealerships, full transparency, shipping to Lagos." />
+<meta name="twitter:image" content="https://frankstell.autos/images/frankstell-logo.jpg" />
+
+<!-- JSON-LD: Organization + WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Organization","AutoDealer","WebSite"],
+  "name": "Frankstell Automotive",
+  "url": "https://frankstell.autos/",
+  "logo": "https://frankstell.autos/images/frankstell-logo.jpg",
+  "sameAs": [
+    "https://facebook.com/frankstell",
+    "https://instagram.com/frankstell",
+    "https://twitter.com/frankstell",
+    "https://linkedin.com/company/frankstell"
+  ],
+  "description": "Helping Nigerians buy brand-new & pre-owned cars from the USA at true cost + transparent commission. Photos, videos, upfront pricing, and shipping support.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://frankstell.autos/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+<!-- PWA Manifest -->
+<link rel="manifest" href="manifest.webmanifest" />
+<meta name="theme-color" content="#5ba7dc" />
+
+<!-- Favicons -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="shortcut icon" href="favicon.ico">
+
+<!-- iOS color/standalone feel -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
+  <!-- Canonical -->
+
+   <style>
     :root{
       --bg:#0b132b;      /* deep navy */
       --bg-2:#1c2541;    /* slate navy */
@@ -40,19 +87,12 @@
     .btn:hover{transform:translateY(-2px)}
     .btn.secondary{background:transparent;color:var(--txt);border:1px solid rgba(255,255,255,.15)}
     .btn.ghost{background:transparent;border:1px dashed rgba(255,255,255,.2);color:var(--muted)}
-  
 
-    .hero{background: url('images/aution_image.png') no-repeat center;  display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      position: relative; }/*background:radial-gradient(1200px 500px at 70% -10%, rgba(91,192,190,.25), transparent 100%),padding:72px 0 36px;border-bottom:1px solid rgba(255,255,255,.06);background:radial-gradient(1200px 500px at 70% -10%, rgba(91,192,190,.25), transparent 40%),radial-gradient(800px 400px at 10% -20%, rgba(255,209,102,.18), transparent 50%)}*/
+    .hero{padding:72px 0 36px;border-bottom:1px solid rgba(255,255,255,.06);background:radial-gradient(1200px 500px at 70% -10%, rgba(91,192,190,.25), transparent 40%),radial-gradient(800px 400px at 10% -20%, rgba(255,209,102,.18), transparent 50%)}
     .hero h1{font-size:clamp(1.9rem,3.2vw,3.2rem);line-height:1.05;margin:0 0 14px}
-    .hero p{font-size:clamp(1rem,1.4vw,1.15rem);color:#fff;margin:0 0 22px;max-width:830px}
+    .hero p{font-size:clamp(1rem,1.4vw,1.15rem);color:#e6edf7cc;margin:0 0 22px;max-width:830px}
     .badge-row{display:flex;flex-wrap:wrap;gap:.6rem;margin:18px 0 28px}
     .badge{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);padding:.45rem .7rem;border-radius:999px;font-weight:600;font-size:.9rem;color:#e6edf7}
-
 
     .grid{display:grid;gap:20px}
     .grid.cards{grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin:28px 0}
